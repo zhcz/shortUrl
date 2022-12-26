@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+<meta property="og:title" content="1 Point" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://1pt.co" />
+<meta property="og:image" content="https://1pt.co/resources/assets/og-image.png" />
+<meta property="og:description" content="An easy-to-use URL shortener that's completely free and open source!" />
+
+
+    <title>1 Point</title>
+
+    <link href="resources/css/style.css" rel="stylesheet" />
+    <link href="resources/css/animate.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans%7CPoppins:400,700&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="resources/favicon/apple-touch-icon%EF%B9%96v=2.png">
+<link rel="icon" type="image/png" sizes="32x32" href="resources/favicon/favicon-32x32%EF%B9%96v=2.png">
+<link rel="icon" type="image/png" sizes="16x16" href="resources/favicon/favicon-16x16%EF%B9%96v=2.png">
+<link rel="manifest" href="resources/favicon/site%EF%B9%96v=2.webmanifest">
+<link rel="mask-icon" href="resources/favicon/safari-pinned-tab%EF%B9%96v=2.svg" color="#2e2f4a">
+<link rel="shortcut icon" href="resources/favicon/favicon%EF%B9%96v=2.ico">
+<meta name="apple-mobile-web-app-title" content="1 Point">
+<meta name="application-name" content="1 Point">
+<meta name="msapplication-TileColor" content="#2e2f4a">
+<meta name="msapplication-config" content="/resources/favicon/browserconfig.xml?v=2">
+<meta name="theme-color" content="#2e2f4a">
+
+  </head>
+  <body>
+    <div id="main">
+      <div id="top">
+        <h1>1 Point <span></span></h1>
+
+        <div class="input-box">
+          <input
+            id="url"
+            type="text"
+            placeholder="粘贴长链接"
+            autofocus
+            autocomplete="off"
+            autocorrect="off"
+            autocapitalize="off"
+            spellcheck="false"
+          />
+          <input id="next" type="button" value="确定" onclick="showOptions();" />
+        </div>
+        <!-- <p id="footer">Made by <a href="https://www.param.me/">Param</a></p> -->
+      </div>
+
+      <div id="options" class="options">
+        <div id="header">
+          <h2>
+            OPTIONS
+            <a
+              class="info-btn"
+              onclick="showPopup('info', 'Options', 'You can customize your URL here');return false;"
+            >
+              <i class="fas fa-question-circle help"></i>
+            </a>
+          </h2>
+        </div>
+
+        <div id="body">
+          <div class="options-left">
+            <h3>Custom URL</h3>
+            Leave blank for a random URL<input type="text" id="custom-url" />
+            <br />
+            <input id="submit" type="button" value="Shorten" />
+          </div>
+
+          <div id="loading">
+            <div class="loader"></div>
+          </div>
+
+          <div id="output-wrapper">
+            <input id="output" type="text" disabled />
+            <div id="copy-wrapper" class="tooltip">
+              <input
+                id="copy"
+                type="button"
+                value="Copy"
+                onclick="copyToClipboard(document.getElementById('output').value);"
+              />
+              <span id="tooltiptext">Copy to clipboard</span>
+            </div>
+          </div>
+
+          <div id="qr-code-wrapper"><img id="qr-code" /></div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/b60a8aab98.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/cleave.js@1.5.3/dist/cleave.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="resources/js/script%EF%B9%963.js"></script>
+  </body>
+</html>
